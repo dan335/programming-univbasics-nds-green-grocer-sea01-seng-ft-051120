@@ -124,8 +124,6 @@ def checkout(cart, coupons)
   cart = apply_coupons(cart, coupons)
   cart = apply_clearance(cart)
   
-  pp cart
-  
   i = 0
   total = 0
   while i < cart.length do
