@@ -69,6 +69,7 @@ def apply_coupons(cart, coupons)
     
     # apply coupon
     if coupon != nil
+      pp coupon
       itemWithCoupon = cart[i].clone
       itemWithCoupon[:item] += " W/COUPON"
       
@@ -85,6 +86,7 @@ def apply_coupons(cart, coupons)
     
     i += 1
   end
+  
   
   pp cart
   puts "-----------end"
