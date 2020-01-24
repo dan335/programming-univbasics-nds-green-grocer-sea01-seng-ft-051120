@@ -87,6 +87,7 @@ def apply_coupons(cart, coupons)
   end
   
   pp cart
+  puts "-----------end"
   cart
 end
 
