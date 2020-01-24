@@ -74,14 +74,18 @@ def apply_coupons(cart, coupons)
       itemWithCoupon[:item] += " W/COUPON"
       
       numForCoupon = (cart[i][:count] / coupon[:num]).floor
-      numForItem = cart[i][:count] - numForCoupon
       
-      cart[i][:count] = numForItem
-      itemWithCoupon[:count] = numForCoupon
+      if (numForCoupon > 0)
+        numForItem = cart[i][:count] - numForCoupon
       
-      itemWithCoupon[:price] = coupon[:cost] / coupon[:num]
+        cart[i][:count] = numForItem
+        itemWithCoupon[:count] = numForCoupon
+        
+        itemWithCoupon[:price] = coupon[:cost] / coupon[:num]
+        
+        cart << itemWithCoupon
+      end
       
-      cart << itemWithCoupon
     end
     
     i += 1
