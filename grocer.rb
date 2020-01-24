@@ -74,7 +74,7 @@ def apply_coupons(cart, coupons)
       itemWithCoupon[:item] += " W/COUPON"
       
       numForCoupon = (cart[i][:count] / coupon[:num]).floor
-      
+      puts numForCoupon
       if (numForCoupon > 0)
         numForItem = cart[i][:count] - numForCoupon
       
