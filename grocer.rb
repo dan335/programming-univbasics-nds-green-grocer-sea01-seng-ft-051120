@@ -44,8 +44,7 @@ def consolidate_cart(cart)
     
     i += 1
   end
-  pp cart
-  pp newCart
+
   newCart
 end
 
