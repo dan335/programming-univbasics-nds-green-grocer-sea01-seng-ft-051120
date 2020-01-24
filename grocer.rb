@@ -125,5 +125,12 @@ def checkout(cart, coupons)
   
   pp cart
   
-  cart
+  i = 0
+  total = 0
+  while i < cart.length do
+    total += cart[i][:price] * cart[i][:count]
+    i += 1
+  end
+  
+  total
 end
