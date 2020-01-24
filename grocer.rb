@@ -52,7 +52,8 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+  puts "-----------"
+  pp cart
   i = 0
   while i < cart.length do
     
