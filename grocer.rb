@@ -52,6 +52,34 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  
+  i = 0
+  while i < cart.length do
+    
+    # search for coupons
+    coupon = nil
+    x = 0
+    while x < coupons.length do
+      if cart[i][:item] == coupons[x][:item]
+        coupon = coupons[x]
+      end
+      x += 1
+    end
+    
+    # apply coupon
+    if coupon != nil
+      itemWithCoupon = cart[i]
+      itemWithCoupon[:item] += " W/COUPON"
+      
+      numForCoupon = Math.floor(cart[i][:count] / coupon[:num])
+      
+      cart << itemWithCoupon
+    end
+    
+    i += 1
+  end
+  
+  cart
 end
 
 def apply_clearance(cart)
