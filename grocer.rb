@@ -69,7 +69,7 @@ def apply_coupons(cart, coupons)
     
     # apply coupon
     if coupon != nil
-      itemWithCoupon = cart[i]
+      itemWithCoupon = cart[i].clone
       itemWithCoupon[:item] += " W/COUPON"
       
       numForCoupon = (cart[i][:count] / coupon[:num]).floor
