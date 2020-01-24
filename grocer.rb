@@ -29,7 +29,7 @@ def consolidate_cart(cart)
     index = nil
     x = 0
     while x < newCart.length do
-      if newCart[:item] == cart[i][:item]
+      if newCart[x][:item] == cart[i][:item]
         index = x
       end
       x += 1
